@@ -11,7 +11,7 @@ class UserBooks{
     create = async (req, res) => {
         const {user_id, book_id, return_date} = req.body;
         
-        const book = await Book.findOne({ where: {id: req.body.book_id}});
+        const book = Book.findOne({ where: {id: req.body.book_id}});
 
         if (!book.id) {
 
